@@ -1,0 +1,19 @@
+{
+    "name": "com.konsnos.simpletabsystem",
+    "version": "0.1",
+    "displayName": "Simple Tab System",
+    "description": "A simple tab system for Unity UI",
+    "unity": "2021.3",
+    "unityRelease": "38f1",
+    "documentationUrl": "https://example.com/",
+    "changelogUrl": "https://example.com/changelog.html",
+    "licensesUrl": "https://example.com/licensing.html",
+   "keywords": [
+      "UI"
+    ],
+    "author": {
+      "name": "Konstantinos Egkarchos",
+      "email": "konsnosl@gmail.com",
+      "url": "https://github.com/konsnos"
+    }
+  }
