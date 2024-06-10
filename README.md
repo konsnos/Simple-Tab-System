@@ -1,4 +1,16 @@
 # Simple Tab System
+
+A simple tab system for fast integration.
+
+
+## Usage
+
+The package includes two small classes `TabButton` and `TabSystem`.
+
+`TabButton` requires components `Image` and `Button`. It controls the colors of the image depending on the state of the tab. It also keeps a reference for the content to show when selected.
+
+`TabSystem` keeps a reference of all the tabs in the group.
+
  
 ## Setup
 
