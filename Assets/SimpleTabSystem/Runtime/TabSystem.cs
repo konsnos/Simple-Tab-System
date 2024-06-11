@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace konsnos.SimpleTabSystem
 {
     public class TabSystem : MonoBehaviour
     {
         public TabButton[] tabButtons;
-        [SerializeField] private int defaultTab = 0;
+        [field:SerializeField] public int CurrentTab { private set; get; } = 0;
+        
+        public UnityEvent<TabSystem> onTabChanged = new UnityEvent<TabSystem>();
         
         public void Start()
         {
@@ -28,6 +31,7 @@ namespace konsnos.SimpleTabSystem
             {
                 tabButtons[i].SetSelected(i == index);
             }
+            onTabChanged?.Invoke(this);
         }
     }
 }
