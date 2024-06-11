@@ -31,6 +31,8 @@ namespace konsnos.SimpleTabSystem
             {
                 tabButtons[i].SetSelected(i == index);
             }
+
+            CurrentTab = index;
             onTabChanged?.Invoke(this);
         }
     }
