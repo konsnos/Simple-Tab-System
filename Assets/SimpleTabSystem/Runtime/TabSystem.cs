@@ -13,7 +13,7 @@ namespace konsnos.SimpleTabSystem
         public void Start()
         {
             Enable();
-            ShowTab(0);
+            ShowTab(CurrentTab);
         }
 
         private void Enable()
