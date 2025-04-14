@@ -8,7 +8,10 @@ namespace konsnos.SimpleTabSystem
         public TabButton[] tabButtons;
         [field:SerializeField] public int CurrentTab { private set; get; } = 0;
         
-        public UnityEvent<TabSystem> onTabChanged = new UnityEvent<TabSystem>();
+        /// <summary>
+        /// Event triggered when the active tab changes. Passes the index of the newly selected tab as a parameter.
+        /// </summary>
+        public UnityEvent<int> onTabChanged = new UnityEvent<int>();
         
         public void Start()
         {
@@ -18,22 +21,22 @@ namespace konsnos.SimpleTabSystem
 
         private void Enable()
         {
-            for (int i = 0; i < tabButtons.Length; i++)
+            for (var i = 0; i < tabButtons.Length; i++)
             {
-                int index = i;
+                var index = i;
                 tabButtons[i].OnClick.AddListener(() => ShowTab(index));
             }
         }
 
         public void ShowTab(int index)
         {
-            for (int i = 0; i < tabButtons.Length; i++)
+            for (var i = 0; i < tabButtons.Length; i++)
             {
                 tabButtons[i].SetSelected(i == index);
             }
 
             CurrentTab = index;
-            onTabChanged?.Invoke(this);
+            onTabChanged?.Invoke(CurrentTab);
         }
     }
 }

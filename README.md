@@ -5,13 +5,14 @@ A simple tab system for fast integration.
 
 ## Usage
 
-The package includes two small classes `TabButton` and `TabSystem`.
-
 `TabButton` requires components `Image` and `Button`. It controls the colors of the image depending on the state of the tab. It also keeps a reference for the content to show when selected.
 
 `TabSystem` keeps a reference of all the tabs in the group.
 
- 
+### Tab Persistence
+
+`TabSystemMemory` class persists the selected tab using Unity's PlayerPrefs. It creates a persistence key by combining a constant prefix with the GameObject name. **Make sure the GameObject name is unique across the scene** to avoid conflicts. The persisted tab index is automatically loaded at startup and updated as the active tab changes.
+
 ## Setup
 
 ### Requirements

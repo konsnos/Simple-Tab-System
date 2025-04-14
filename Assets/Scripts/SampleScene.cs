@@ -1,13 +1,21 @@
-using konsnos.SimpleTabSystem;
+using UnityEditor;
 using UnityEngine;
 
 namespace com.konsnos.SimpleTabSystem
 {
     public class SampleScene : MonoBehaviour
     {
-        public void TabChanged(TabSystem tabSystem)
+        public void TabChanged(int tabIndex)
         {
-            Debug.Log("Tab changed to " + tabSystem.CurrentTab);
+            Debug.Log("Tab changed to " + tabIndex);
+        }
+        
+        [MenuItem("konsnos Tools/Clear PlayerPrefs")]
+        private static void ClearAllPlayerPrefs()
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+            Debug.Log("PlayerPrefs cleared.");
         }
     }
 }

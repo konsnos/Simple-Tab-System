@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.3] - 2025-04-14
+* Added the `TabSystemMemory` class to persist the current tab using PlayerPrefs.
+ 
 ## [1.1.2] - 2024-06-20
 * Fixed issue where the initial tab was not being set correctly
 
